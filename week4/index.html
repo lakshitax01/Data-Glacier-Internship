@@ -13,14 +13,15 @@
 
 <body>
  <div class="login">
-	<h1>Predict House Price</h1>
+	<h1>Predict Profit</h1>
 
      <!-- Main Input For Receiving Query to our ML -->
+     <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('predict')}}"method="post">
-		<input type="text" name="no_of_rooms" placeholder="Number of Rooms" required="required" />
-        <input type="text" name="area" placeholder="Area (in square feet)" required="required" />
-		<input type="text" name="house_age" placeholder="House Age" required="required" />
-
+    	<input type="text" name="R&D Spend" placeholder="R&D Spend" required="required" />
+        <input type="text" name="Administration" placeholder="Administration" required="required" />
+		<input type="text" name="Marketing" placeholder="Marketing" required="required" />
+  
         <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
     </form>
 
@@ -29,7 +30,7 @@
    {{ prediction_text }}
 
  </div>
- <img src="/static/images/Original.svg" style="width: 400px;position: absolute;bottom: 10px;left: 10px;" alt="Company Logo"/>
+ 
 
 </body>
 </html>
